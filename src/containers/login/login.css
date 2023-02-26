@@ -1,74 +1,98 @@
 /* Login page styles */
 .login-page {
-    background: url("../../images/restaurant-interior.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    font-weight: 700;
-    overflow: hidden;
-    color: var(--white);
-  }
-  .login-container .logo {
-    text-align: center;
-    display: block;
-  }
-  .login-container .logo img {
-    width: 7rem;
-  }
+  background: url("../../images/restaurant-interior.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-weight: 700;
+  overflow: hidden;
+  color: var(--white);
+}
+.login-container .logo {
+  text-align: center;
+  display: block;
+}
+.login-container .logo img {
+  width: 7rem;
+}
+.login-container {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.login-container .props {
+  display: flex;
+  flex-direction: column;
+  margin-block: 1rem;
+}
+.login-container label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.login-container input {
+  padding-block: 0.9rem;
+  background-color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.login-container .login {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--font-family-main);
+  margin-top: 1rem;
+  transition: 0.15s ease-in;
+  padding-block: 0.9rem;
+  box-shadow: 0 0 20px var(--primary-color);
+  cursor: pointer;
+}
+
+.login-container #login:hover {
+  box-shadow: 0 0 30px var(--primary-color);
+}
+.login-container .reset {
+  display: flex;
+  justify-content: flex-end;
+}
+.login-container .new-user {
+  text-align: center;
+  margin-top: 5rem;
+}
+.login-container .new-user .new {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* mobile styles */
+@media (max-width: 1200px) {
   .login-container {
-    width: 30%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    width: 50%;
   }
-  .login-container .props {
-    display: flex;
-    flex-direction: column;
-    margin-block: 1rem;
+}
+
+@media (max-width: 900px) {
+  .login-container {
+    width: 60%;
   }
-  .login-container label {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .login-container {
+    width: 80%;
   }
-  .login-container input {
-    padding-block: 0.9rem;
-    background-color: var(--white);
-    outline: none;
-    border: none;
-    border-radius: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%;
   }
-  
-  .login-container #login {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: var(--font-family-main);
-    margin-top: 1rem;
-    transition: 0.15s ease-in;
-    padding-block: 0.9rem;
-    box-shadow: 0 0 20px var(--primary-color);
-    cursor: pointer;
-  }
-  
-  .login-container #login:hover {
-    box-shadow: 0 0 30px var(--primary-color);
-  }
-  #reset {
-    display: flex;
-    justify-content: flex-end;
-  }
-  #new-user {
-    text-align: center;
-    margin-top: 5rem;
-  }
-  #new-user #new {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 800;
-  }
-  
+}

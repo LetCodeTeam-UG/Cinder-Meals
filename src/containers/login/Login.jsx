@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
-import "./login.css"
+import "./login.css";
 
 const Login = () => {
   const formProps = [
@@ -11,7 +11,9 @@ const Login = () => {
     "Forgot Password?",
     "Create New Account",
   ];
-  const loginBtn = <input id="login" type="submit" value={formProps[2]} />;
+  const loginBtn = (
+    <input className="login" type="submit" value={formProps[2]} />
+  );
   return (
     <div className="login-page">
       <div className="login-container">
@@ -34,13 +36,13 @@ const Login = () => {
           {/* login-btn */}
           <div className="props">{loginBtn}</div>
           {/* password reset */}
-          <div id="reset">{formProps[3]}</div>
+          <div className="reset">{formProps[3]}</div>
 
           {/* create new account */}
-          <div id="new-user">
+          <div className="new-user">
             New to cinder?{" "}
             <span>
-              <Link id="new" to="/signup">
+              <Link className="new" to="/signup">
                 {formProps[4]}
               </Link>
             </span>
