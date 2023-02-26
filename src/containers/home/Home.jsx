@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 import main from "../../images/home-dish-main.jpg";
 import jollof from "../../images/jollof-rice.jpg";
 import side from "../../images/home-dish-one.jpg";
@@ -52,6 +53,8 @@ const Home = () => {
             </button>
           </div>
         </section>
+
+        <Footer />
       </>
     </div>
   );
