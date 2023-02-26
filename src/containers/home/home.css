@@ -1,0 +1,62 @@
+/* Home page styles */
+.menu-glimpse {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.menu-glimpse div img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  font-weight: 700;
+  border-radius: 0.3rem;
+}
+/* header */
+.menu-display .home-header {
+  font-size: 4.5rem;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-block: 2rem;
+  font-family: var(--font-family-headers);
+  color: var(--primary-color);
+}
+/* button styles */
+.menu-display .redirect {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.menu-display .redirect .link {
+  text-decoration: none;
+}
+.menu-display .redirect button {
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  font-size: 1.5rem;
+  font-family: var(--font-family-main);
+  border: none;
+  border-radius: 0.3rem;
+}
+.menu-display .redirect .menu-link {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.menu-display .redirect .track-link {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  box-shadow: inset 0 0 20px var(--bg-color);
+}
+/* link styles */
+.menu-link .link {
+  color: var(--white);
+  font-weight: 700;
+}
+.track-link .link {
+  color: var(--primary-color);
+  font-weight: 700;
+}

@@ -75,7 +75,7 @@
 /* mobile styles */
 @media (max-width: 1200px) {
   .login-container {
-    width: 50%;
+    width: 40%;
   }
 }
 
