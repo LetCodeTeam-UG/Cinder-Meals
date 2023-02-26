@@ -1,10 +1,4 @@
 /* Login page styles */
-body {
-  color: var(--white);
-}
-.navbar {
-  display: none;
-}
 .login-page {
   background: url("../images/restaurant-interior.jpg");
   background-position: center;
@@ -12,6 +6,7 @@ body {
   height: 100vh;
   font-weight: 700;
   overflow: hidden;
+  color: var(--white);
 }
 .login-container .logo {
   text-align: center;
