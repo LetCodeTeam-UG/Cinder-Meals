@@ -1,5 +1,29 @@
-body {
+/* font families */
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+/* global variables */
+:root {
+  --primary-color: #ed7014;
+  --main-text-color: #080402;
+  --button-text-color: #fcfbfc;
+  --header-font-size: 3rem;
+  --standard-text-font: 1rem;
+  --inline-padding-body: 5%;
+  --font-family-main: "Montserrat", sans-serif;
+  --font-family-headers: "Volkhov", sans-serif;
+}
+::before,
+::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: var(--font-family-main);
+  margin: 0;
+  padding: 0;
 }
