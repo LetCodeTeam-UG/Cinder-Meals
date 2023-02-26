@@ -1,4 +1,4 @@
 # Cinder Meals
 
 Login page
-@localhost:/login
+@localhost:3000/login
