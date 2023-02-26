@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.png";
-import "../styles/login.css";
+import logo from "../../images/logo.png";
+import "./login.css"
 
 const Login = () => {
   const formProps = [
