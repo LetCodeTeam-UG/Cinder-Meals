@@ -1,27 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+import "../styles/login.css";
 
 const Login = () => {
   const formProps = [
-    "Username",
+    "Email",
     "Password",
     "Login",
     "Forgot Password?",
     "Create New Account",
   ];
-  const loginBtn = <input id="login" placeholder={formProps[2]} />;
+  const loginBtn = <input id="login" type="submit" value={formProps[2]} />;
   return (
     <div className="login-page">
       <div className="login-container">
         {/* brand logo goes here */}
-        <span>
+        <span className="logo">
           <img src={logo} alt="cinder" />
         </span>
         <form action="">
           {/* username */}
           <div className="props">
-            <label htmlFor="username">{formProps[0]}</label>
-            <input type="text" id="password" />
+            <label htmlFor="email">{formProps[0]}</label>
+            <input type="email" id="email" />
           </div>
           {/* password */}
           <div className="props">
@@ -30,7 +32,19 @@ const Login = () => {
           </div>
 
           {/* login-btn */}
-          <div>{loginBtn}</div>
+          <div className="props">{loginBtn}</div>
+          {/* password reset */}
+          <div id="reset">{formProps[3]}</div>
+
+          {/* create new account */}
+          <div id="new-user">
+            New to cinder?{" "}
+            <span>
+              <Link id="new" to="/signup">
+                {formProps[4]}
+              </Link>
+            </span>
+          </div>
         </form>
       </div>
     </div>
