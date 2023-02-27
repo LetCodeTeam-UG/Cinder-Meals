@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 import grilled from "../../images/grilled-chicken.jpg";
 import jollof from "../../images/jollof-rice.jpg";
 import side from "../../images/home-dish-one.jpg";

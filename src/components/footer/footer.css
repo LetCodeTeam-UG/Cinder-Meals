@@ -35,6 +35,7 @@
 .cinder__footer-copyright{
     font-weight: bold;
     font-family: var(--font-family-main);
+    text-align: center;
 }
 
 .cinder__footer-copyright-cinder {

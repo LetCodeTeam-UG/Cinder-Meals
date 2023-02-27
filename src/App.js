@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Navbar, Footer } from "./components";
 import { Contact, Home, Login, Menu, TrackOrder } from "./containers";
 import "./App.css";
 

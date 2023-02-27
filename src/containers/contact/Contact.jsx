@@ -7,9 +7,10 @@ const Contact = () => {
   return <div>
     <>
     <Navbar/>
+    Contact
     <Footer/>
     </>
-    Contact</div>;
+    </div>;
 };
 
 export default Contact;
