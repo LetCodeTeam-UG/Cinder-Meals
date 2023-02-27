@@ -13,8 +13,15 @@
   align-items: center;
   gap: 3rem;
 }
+<<<<<<< HEAD
 .cinder__navbar .cinder__navbar-links li {
   list-style: none;
+=======
+
+.cinder__navbar-links_logo img {
+    width: 100%;
+    height: 100px;
+>>>>>>> 4a50e110c2fb526e2df57e3184b0d1c72c400c16
 }
 
 .cinder__navbar .cinder__navbar-links .paths {
