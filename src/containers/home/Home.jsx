@@ -24,18 +24,6 @@ const Home = () => {
       <>
         <Navbar />
         {/* three main meals displayed */}
-        <section className="menu-glimpse">
-          <div>
-            <img src={grilled} alt="grilled" />
-          </div>
-          <div>
-            <img src={side} alt="main-two" />
-          </div>
-          <div>
-            <img src={jollof} alt="jollof" />
-          </div>
-        </section>
-        {/* a text that inspires and some buttons */}
         <section className="menu-display">
           <h1 className="home-header">{homeHeader}</h1>
           <div className="redirect">
@@ -53,6 +41,18 @@ const Home = () => {
             </button>
           </div>
         </section>
+        <section className="menu-glimpse">
+          <div>
+            <img src={grilled} alt="grilled" />
+          </div>
+          <div>
+            <img src={side} alt="main-two" />
+          </div>
+          <div>
+            <img src={jollof} alt="jollof" />
+          </div>
+        </section>
+        {/* a text that inspires and some buttons */}
 
         <Footer />
       </>
