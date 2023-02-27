@@ -1,11 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
-<<<<<<< HEAD
 import grilled from "../../images/grilled-chicken.jpg";
-=======
-import Footer from "../../components/footer/Footer";
-import main from "../../images/home-dish-main.jpg";
->>>>>>> 4a50e110c2fb526e2df57e3184b0d1c72c400c16
 import jollof from "../../images/jollof-rice.jpg";
 import side from "../../images/home-dish-one.jpg";
 import { Link } from "react-router-dom";
