@@ -12,7 +12,9 @@ const Login = () => {
     "Create New Account",
   ];
   const loginBtn = (
-    <input className="login" type="submit" value={formProps[2]} />
+    <Link className="to-login" to="/">
+      <input className="login" type="submit" value={formProps[2]} />
+    </Link>
   );
   return (
     <div className="login-page">

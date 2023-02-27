@@ -52,6 +52,7 @@
   transition: 0.15s ease-in;
   padding-block: 0.9rem;
   box-shadow: 0 0 20px var(--primary-color);
+  width: 100%;
   cursor: pointer;
 }
 

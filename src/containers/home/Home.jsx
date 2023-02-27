@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
-import main from "../../images/home-dish-main.jpg";
+import grilled from "../../images/grilled-chicken.jpg";
 import jollof from "../../images/jollof-rice.jpg";
 import side from "../../images/home-dish-one.jpg";
 import { Link } from "react-router-dom";
@@ -25,13 +25,13 @@ const Home = () => {
         {/* three main meals displayed */}
         <section className="menu-glimpse">
           <div>
-            <img src={main} alt="main-one" />
-          </div>
-          <div>
-            <img src={jollof} alt="jollof" />
+            <img src={grilled} alt="grilled" />
           </div>
           <div>
             <img src={side} alt="main-two" />
+          </div>
+          <div>
+            <img src={jollof} alt="jollof" />
           </div>
         </section>
         {/* a text that inspires and some buttons */}
