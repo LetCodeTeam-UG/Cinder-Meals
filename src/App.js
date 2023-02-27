@@ -9,6 +9,7 @@ class App extends Component {
 			<div className="App">
 				<Routes>
 					<Route path="" element={<Home />}></Route>
+					<Route path="/home" element={<Home />}></Route>
 					<Route path="/menu" element={<Menu />}></Route>
 					<Route path="/trackorder" element={<TrackOrder />}></Route>
 					<Route path="/contact" element={<Contact />}></Route>

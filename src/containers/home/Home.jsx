@@ -23,7 +23,6 @@ const Home = () => {
     <div>
       <>
         <Navbar />
-        {/* three main meals displayed */}
         <section className="menu-display">
           <h1 className="home-header">{homeHeader}</h1>
           <div className="redirect">
@@ -41,6 +40,7 @@ const Home = () => {
             </button>
           </div>
         </section>
+        {/* three main meals displayed */}
         <section className="menu-glimpse">
           <div>
             <img src={grilled} alt="grilled" />

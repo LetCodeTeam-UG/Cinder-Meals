@@ -9,6 +9,7 @@ const Navbar = () => {
     {
       name: "Home",
       path: "/",
+      pathTwo: "/home",
     },
     {
       name: "Menu",
@@ -33,7 +34,7 @@ const Navbar = () => {
       </div>
       <ul className="cinder__navbar-links">
         <li>
-          <Link className="paths" to={navLinks[0].path}>
+          <Link className="paths" to={navLinks[0].pathTwo}>
             {navLinks[0].name}
           </Link>
         </li>
