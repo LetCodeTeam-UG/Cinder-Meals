@@ -1,0 +1,120 @@
+.contact-header-bg {
+  background-image: url("../../images/contact.jpg");
+  background-position: 20% 30%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 60vh;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+}
+.contact-header-bg .headers {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+.contact-header-bg .headers h1 {
+  font-size: var(--header-font-size);
+  font-family: var(--font-family-headers);
+}
+/* contact section */
+.contact-box {
+  margin: auto;
+  width: 60%;
+}
+.contact-box h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+.contact-box h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.contact-box .socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.contact-box .socials div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  gap: 2rem;
+  padding: 3rem;
+  margin-block: 2rem;
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-form .message-sender div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form .message-sender input {
+  margin-bottom: 1rem;
+  padding-block: 1.2rem;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  outline: 1px solid var(--primary-color);
+}
+
+.contact-form .message-input textarea {
+  height: 84%;
+  width: 100%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0.5rem;
+  border-radius: 0.3rem;
+  outline: 1px solid var(--primary-color);
+}
+
+.contact-container {
+  width: 60%;
+  margin: auto;
+}
+.contact-container label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.contact-container .send-box {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-container .send-box input {
+  width: 40%;
+  padding-block: 1rem;
+  background-color: var(--primary-color);
+  font-family: var(--font-family-headers);
+  font-weight: 600;
+  color: var(--white);
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}

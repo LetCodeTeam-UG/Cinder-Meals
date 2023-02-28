@@ -1,0 +1,30 @@
+.track-header-bg {
+  background-image: url("../../images/delivery.jpg");
+  background-position: 20% 12%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 60vh;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  position: relative;
+}
+.track-header-bg > * {
+  position: relative;
+  color: var(--white);
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  z-index: 2;
+}
+.track-header-bg .headers h1 {
+  font-size: var(--header-font-size);
+  font-family: var(--font-family-headers);
+}
+.track-header-bg:after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}

@@ -10,7 +10,7 @@ Menu Page
 @localhost:3000/menu ---- done
 
 Contact Page
-@localhost:3000/contact ---- in progress
+@localhost:3000/contact ---- done
 
 Track Order Page
 @localhost:3000/trackorder ---- in progress

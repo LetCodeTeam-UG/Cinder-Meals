@@ -1,7 +1,8 @@
 .menu-header-bg {
-  background-image: url("../../images//home-dish-main.jpg");
+  background-image: url("../../images/home-dish-main.jpg");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   height: 60vh;
   display: grid;
   place-items: center;
