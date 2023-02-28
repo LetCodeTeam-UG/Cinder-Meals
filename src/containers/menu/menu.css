@@ -1,0 +1,23 @@
+.menu-header-bg {
+  background-image: url("../../images//home-dish-main.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+}
+.menu-header-bg .headers {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  padding-block: 2rem;
+}
+.menu-header-bg .headers h1 {
+  font-size: var(--header-font-size);
+  font-family: var(--font-family-headers);
+}
+.menu-header-bg .headers p {
+  font-size: 1rem;
+  font-weight: 600;
+}
