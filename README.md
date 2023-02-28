@@ -6,8 +6,8 @@ Login page
 Home page
 @localhost:3000/home ---- done
 
-Menu Page
-@localhost:3000/menu ---- done
+Menu Page & Order Page
+@localhost:3000/menu ---- almost done
 
 Contact Page
 @localhost:3000/contact ---- done
