@@ -11,7 +11,7 @@
   --logo-size-desktop: 4rem;
   --logo-size-mobile: 2rem;
   --header-font-size: 4.5rem;
-  --sub-header-font-size: 2rem
+  --sub-header-font-size: 2rem;
   --standard-text-font: 1rem;
   --inline-padding-body: 8%;
   --font-family-main: "Montserrat", sans-serif;
@@ -29,6 +29,7 @@ html {
 body {
   font-family: var(--font-family-main);
   background-color: var(--bg-color);
+  color: var(--main-text-color);
   margin: 0;
   padding: 0;
 }

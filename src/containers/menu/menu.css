@@ -11,13 +11,84 @@
   width: 60%;
   text-align: center;
   margin: auto;
-  padding-block: 2rem;
 }
 .menu-header-bg .headers h1 {
   font-size: var(--header-font-size);
   font-family: var(--font-family-headers);
 }
-.menu-header-bg .headers p {
+.menu-header-bg .headers h4 {
   font-size: 1rem;
   font-weight: 600;
+}
+.menu .categories {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: var(--inline-padding-body);
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding-block: 1rem;
+}
+.menu .menu-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-family: var(--font-family-headers);
+}
+.menu .select-category {
+  border-color: var(--primary-color);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-family: var(--font-family-headers);
+  padding: 0.5rem 1rem 0.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* menu items */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding-inline: var(--inline-padding-body);
+  padding-bottom: 2rem;
+}
+.menu-items .item-container img {
+  width: 100%;
+  border-radius: 100%;
+}
+.menu-items .item-container {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+/* menu item props styling */
+.menu-items .item-container .main-dish-name,
+.menu-items .item-container .main-dish-price {
+  display: block;
+}
+.menu-items .item-container .main-dish-name {
+  text-align: center;
+  margin-block: 0.25rem;
+  font-weight: 500;
+}
+.menu-items .item-container .main-dish-price button {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: var(--primary-color);
+  border: none;
+  margin-block: 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
