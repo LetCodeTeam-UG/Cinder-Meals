@@ -14,7 +14,7 @@ class App extends Component {
 					<Route path="/trackorder" element={<TrackOrder />}></Route>
 					<Route path="/contact" element={<Contact />}></Route>
 					<Route path="/login" element={<Login />}></Route>
-					<Route exact path="/meal/:id" element={<ProductPage />} />
+					<Route exact path="/product/:id" element={<ProductPage />}></Route>
 				</Routes>
 			</div>
 		);
