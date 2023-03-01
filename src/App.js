@@ -8,7 +8,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Routes>
-					<Route path="" element={<ProductPage />}></Route>
+					<Route path="" element={<Home />}></Route>
 					<Route path="/home" element={<Home />}></Route>
 					<Route path="/menu" element={<Menu />}></Route>
 					<Route path="/trackorder" element={<TrackOrder />}></Route>
