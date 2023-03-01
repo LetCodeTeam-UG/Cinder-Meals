@@ -5,31 +5,105 @@
   align-items: center;
   padding-inline: var(--inline-padding-body);
 }
-.cinder__logo img {
+.cinder__navbar-logo img {
   width: var(--logo-size-desktop);
 }
-.cinder__navbar .cinder__navbar-links {
+.cinder__navbar-links {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
-.cinder__navbar .cinder__navbar-links li {
-  list-style: none;
-}
 
-.cinder__navbar .cinder__navbar-links .paths {
+.cinder__navbar-links .paths {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 600;
   font-size: 1.1rem;
 }
-.cinder__navbar .cinder__navbar-links .cart {
+.cinder__navbar-links .cart {
   position: relative;
   cursor: pointer;
 }
-.cinder__navbar .cinder__navbar-links .quantity {
+.cinder__navbar-links .quantity {
   position: absolute;
   top: -5px;
   color: var(--primary-color);
   font-weight: 600;
+}
+
+/* Mobile responsiveness */
+.cinder__navbar-menu {
+  margin-left: 1rem;
+  display: none;
+  position: relative;
+}
+
+.cinder__navbar-menu svg {
+  cursor: pointer;
+}
+
+.cinder__navbar-menu_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+
+  text-align: end;
+  background: var(--primary-color);
+  padding: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 0;
+
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0 0 5 rgba(0,0,0,0.2);
+}
+
+.cinder__navbar-menu_container-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2ch;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cinder__navbar-menu_container-links .paths {
+  color: beige;
+  text-decoration: none;
+  font-family: var(--font-family-main);
+  font-weight: bold;
+}
+
+
+/* .cinder__navbar-menu-container li {
+  margin: 1rem 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1050px ) {  
+  .cinder__navbar-links {
+    display: none;
+  }
+  .cinder__navbar-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cinder__navbar {
+    padding: 2rem 4rem;
+  }
+  
+}
+
+@media screen and (max-width: 550px) {
+  .cinder__navbar {
+    padding: 2rem;
+  }
+  .cinder__navbar-links {
+    display: none;
+  }
 }
