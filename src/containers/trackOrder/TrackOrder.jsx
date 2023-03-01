@@ -20,9 +20,9 @@ const TrackOrder = () => {
             <h1>Follow up on your order</h1>
           </div>
         </div>
-        <div>
+        <div className="track-your-order_button" >
           <input type="text" />
-          <button>Search
+          <button className="track-your-orderbutton" >Search
           </button>
         </div>
       </section>
