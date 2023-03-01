@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./menu.css";
@@ -9,50 +10,113 @@ import salad from "../../images/chicken-salad.jpg";
 import fries from "../../images/fries.jpg";
 import noodles from "../../images/noodles.jpg";
 import chicken from "../../images/grilled-chicken.jpg";
+// beverages
+import watermelon from "../../images/watermelon-juice.jpg";
+import orange from "../../images/orange-juice.jpg";
+import lemonade from "../../images/lime-juice.jpg";
+import heineken from "../../images/heineken.jpg";
+import guinness from "../../images/guinness.jpg";
+import coke from "../../images/coca-cola.jpg";
 
 const Menu = () => {
   const menuHeader = "Choose from a variety of dishes";
   const menuSubHeader = "From Local to Continental";
 
-  const meals = [
+  const [meals, setMeals] = useState([
     {
       name: "Assorted Fried Rice",
-      id: "",
+      id: uuidv4(),
       image: rice,
-      price: "GHC50.00",
+      price: 49.99,
     },
     {
       name: "Jollof Rice",
-      id: "",
+      id: uuidv4(),
       image: jollof,
-      price: "GHC45.00",
+      price: 44.99,
     },
     {
       name: "Chicken Salad",
-      id: "",
+      id: uuidv4(),
       image: salad,
-      price: "GHC55.00",
+      price: 54.99,
     },
     {
       name: "French Fries",
-      id: "",
+      id: uuidv4(),
       image: fries,
-      price: "GHC35.00",
+      price: 34.99,
     },
     {
       name: "Assorted Noodles",
-      id: "",
+      id: uuidv4(),
       image: noodles,
-      price: "GHC40.00",
+      price: 39.99,
     },
     {
       name: "Grilled Chicken",
-      id: "",
+      id: uuidv4(),
       image: chicken,
-      price: "GHC50.00",
+      price: 49.99,
     },
-  ];
+  ]);
+  const [originalMeals, setOriginalMeals] = useState(meals);
 
+  const handleBeveragesClick = () => {
+    const beverages = [
+      {
+        name: "Watermelon Juice",
+        id: uuidv4(),
+        image: watermelon,
+        price: 14.99,
+      },
+      {
+        name: "Orange Juice",
+        id: uuidv4(),
+        image: orange,
+        price: 14.99,
+      },
+      {
+        name: "Lemonade",
+        id: uuidv4(),
+        image: lemonade,
+        price: 19.99,
+      },
+      {
+        name: "Heineken",
+        id: uuidv4(),
+        image: heineken,
+        price: 24.99,
+      },
+      {
+        name: "Malta Guinness",
+        id: uuidv4(),
+        image: guinness,
+        price: 19.99,
+      },
+      {
+        name: "Coca Cola",
+        id: uuidv4(),
+        image: coke,
+        price: 14.99,
+      },
+    ];
+    setMeals(beverages);
+  };
+
+  const handleMainClick = () => {
+    setMeals(originalMeals);
+  };
+
+  // get data when user clicks
+  const handleLinkClick = (id) => {
+    const product = meals.find((meal) => meal.id === id);
+    if (product) {
+      // transfer data to ProductPage.jsx
+      // update address bar with product id and path
+      // update the route to the Product Page in the app.js
+    }
+  };
   return (
     <>
       <Navbar />
@@ -66,87 +130,36 @@ const Menu = () => {
         <div className="categories">
           <div className="menu-title">Menu</div>
           <div className="menu-categories">
-            <select className="select-category" name="category" id="category">
-              <option value="main">Main</option>
-              <option value="beverages">Beverages</option>
-            </select>
+            <div className="select-category" name="category" id="category">
+              <button className="main" onClick={handleMainClick}>
+                Main
+              </button>
+              <button className="beverages" onClick={handleBeveragesClick}>
+                Beverages
+              </button>
+            </div>
           </div>
         </div>
       </section>
       <section className="menu-items">
-        <div className="item-container">
-          <span className="item-image">
-            <img src={meals[0].image} alt="assorted-rice" />
-          </span>
-          <span className="main-dish-name">{meals[0].name}</span>
-          <Link to="" className="main-dish-price">
-            <button>
-              <span>{meals[0].price}</span>
-              <span></span>
-            </button>
-          </Link>
-        </div>
-        <div className="item-container">
-          <span className="item-image">
-            <img src={meals[1].image} alt="jollof-rice" />
-          </span>
-          <span className="main-dish-name">{meals[1].name}</span>
-          <Link to="" className="main-dish-price">
-            <button>
-              <span>{meals[1].price}</span>
-              <span></span>
-            </button>
-          </Link>
-        </div>
-        <div className="item-container">
-          <span className="item-image">
-            <img src={meals[2].image} alt="chicken-salad" />
-          </span>
-          <span className="main-dish-name">{meals[2].name}</span>
-          <Link to="" className="main-dish-price">
-            <button>
-              <span>{meals[2].price}</span>
-              <span></span>
-            </button>
-          </Link>
-        </div>
-        <div className="item-container">
-          <span className="item-image">
-            <img src={meals[3].image} alt="french-fries" />
-          </span>
-          <span className="main-dish-name">{meals[3].name}</span>
-          <Link to="" className="main-dish-price">
-            <button>
-              <span>{meals[3].price}</span>
-              <span></span>
-            </button>
-          </Link>
-        </div>
-        <div className="item-container">
-          <span className="item-image">
-            <img src={meals[4].image} alt="assorted-noodles" />
-          </span>
-          <span className="main-dish-name">{meals[4].name}</span>
-          <Link to="" className="main-dish-price">
-            <button>
-              <span>{meals[4].price}</span>
-              <span></span>
-            </button>
-          </Link>
-        </div>
-        <div className="item-container">
-          <span className="item-image">
-            <img src={meals[5].image} alt="grilled-chicken" />
-          </span>
-          <span className="main-dish-name">{meals[5].name}</span>
-          <Link to="" className="main-dish-price">
-            <button>
-              <span>{meals[5].price}</span>
-              <span></span>
-            </button>
-          </Link>
-        </div>
+        {meals.map((meal) => (
+          <div key={meal.id} className="item-container">
+            <img src={meal.image} alt={meal.name} className="dish-image" />
+            <h3 className="dish-name">{meal.name}</h3>
+            <Link
+              to={`/meal/${meal.id}`}
+              onClick={() => handleLinkClick(meal.id)}
+              className="dish-price"
+            >
+              <button>
+                {" "}
+                <span>GHC{meal.price}</span>
+              </button>
+            </Link>
+          </div>
+        ))}
       </section>
+
       <Footer />
     </>
   );

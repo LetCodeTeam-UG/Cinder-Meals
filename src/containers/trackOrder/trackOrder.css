@@ -1,6 +1,6 @@
 .track-header-bg {
   background-image: url("../../images/delivery.jpg");
-  background-position: 20% 12%;
+  background-position: top;
   background-size: cover;
   background-attachment: fixed;
   height: 60vh;
