@@ -37,11 +37,55 @@
 
 .track-follow {
   text-align: center;
-  font-family: var(--font-family-main);
   color: var(--primary-color);
+  padding-top: 5rem;
+}
+
+.track-follow h1 {
+  font-family: var(--font-family-headers);
+  text-transform: uppercase;
 }
 
 .track-your-order-button {
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.track-content_input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 2rem 0 2rem;
+
+  display: flex;
+}
+.track-content_input input {
+  flex:2;
+  width: 100%;
+  min-height: 50px;
+  font-family: var(--font-family-main);
+  border-radius: 5px 5px 5px 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  padding: 0 1rem;
+  border-color: var(--primary-color);
+}
+
+.track-content_input button {
+  flex:1;
+  width: 100%;
+  min-height: 50px;
+  font-family: var(--font-family-headers);
+  border-radius: 5px 0px 0px 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  padding: 0 1rem;
+  color: var(--primary-color);
+
 }

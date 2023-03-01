@@ -14,17 +14,18 @@ const TrackOrder = () => {
           </div>
         </div>
       </section>
+
+
       <section className="track-your-order">
-        <div className="track-your-order-">
           <div className="track-follow">
             <h1>Follow up on your order</h1>
           </div>
-        </div>
-        <div className="track-your-order_button" >
-          <input type="text" />
-          <button className="track-your-orderbutton" >Search
-          </button>
-        </div>
+        
+          <div className="track-content_input" >
+            <input type="number" placeholder="Enter your order number" />
+            <button type="button" >Search
+            </button>
+          </div>
       </section>
       <Footer />
     </div>
