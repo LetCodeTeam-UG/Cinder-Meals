@@ -73,7 +73,7 @@ const Navbar = () => {
         {toggleMenu ? <RiCloseLine color="var(--primary-color)"  size={27} onClick={() => setToggleMenu(false) } /> : 
         <RiMenu3Line color="var(--primary-color)"  size={27} onClick={() => setToggleMenu(true) } /> }
         {toggleMenu && (
-          <div className="cinder__navbar-menu_container">
+          <div className="cinder__navbar-menu_container scale-up-center">
             <div className="cinder__navbar-menu_container-links">
                 <div>
                 <Link className="paths" to={navLinks[0].pathTwo}>
