@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Contact, Home, Login, Menu, TrackOrder } from "./containers";
+import { Contact, Home, Login, Menu, ProductPage, TrackOrder } from "./containers";
 import "./App.css";
 
 class App extends Component {
@@ -8,12 +8,13 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Routes>
-					<Route path="" element={<Home />}></Route>
+					<Route path="" element={<ProductPage />}></Route>
 					<Route path="/home" element={<Home />}></Route>
 					<Route path="/menu" element={<Menu />}></Route>
 					<Route path="/trackorder" element={<TrackOrder />}></Route>
 					<Route path="/contact" element={<Contact />}></Route>
 					<Route path="/login" element={<Login />}></Route>
+					<Route exact path="/meal/:id" element={<ProductPage />} />
 				</Routes>
 			</div>
 		);

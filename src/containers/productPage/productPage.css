@@ -1,0 +1,52 @@
+.product-header-bg {
+  background-image: url("../../images/restaurant-interior.jpg");
+  background-position: 20% 30%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 60vh;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+}
+.product-header-bg .headers {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+.product-header-bg .headers h1 {
+  font-size: var(--header-font-size);
+  font-family: var(--font-family-headers);
+}
+
+/* form section */
+.info-form label {
+  display: block;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-block: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.info-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-inline: var(--inline-padding-body);
+  width: 70%;
+  margin: auto;
+  gap: 5rem;
+  margin-block: 2rem;
+}
+.info-form textarea {
+  width: 100%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  outline: none;
+}
+.info-form textarea::placeholder {
+  font-size: 1rem;
+}
