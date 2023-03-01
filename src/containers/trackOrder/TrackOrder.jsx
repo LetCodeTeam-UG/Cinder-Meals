@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./trackOrder.css";
+import track from "../../images/track.jpg"
 
 const TrackOrder = () => {
   return (
@@ -25,6 +26,10 @@ const TrackOrder = () => {
             <input type="number" placeholder="Enter your order number" />
             <button type="button" >Search
             </button>
+          </div>
+
+          <div className="track-content_track">
+            <img src={track} alt="track" />
           </div>
       </section>
       <Footer />

@@ -89,3 +89,13 @@
   color: var(--primary-color);
 
 }
+
+.track-content_track {
+  align-items: center;
+  justify-content: center;
+}
+
+.track-content_track img { 
+  width: 700px;
+  height: 700px;
+}
