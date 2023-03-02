@@ -72,6 +72,7 @@ const Menu = () => {
       price: 49.99,
     },
   ]);
+  // eslint-disable-next-line
   const [originalMeals, setOriginalMeals] = useState(meals);
 
   const handleBeveragesClick = () => {
