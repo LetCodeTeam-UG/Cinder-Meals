@@ -1,8 +1,10 @@
 import React from "react";
+import {FiSearch} from "react-icons/fi"
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./trackOrder.css";
 import track from "../../images/track.jpg"
+
 
 const TrackOrder = () => {
   return (
@@ -24,7 +26,8 @@ const TrackOrder = () => {
         
           <div className="track-content_input" >
             <input type="number" placeholder="Enter your order number" />
-            <button type="button" >Search
+            <button type="button"> 
+            <FiSearch/>
             </button>
           </div>
 
