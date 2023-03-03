@@ -2,7 +2,7 @@
 .menu-glimpse {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 3rem;
   padding-inline: var(--inline-padding-body);
   padding-bottom: 2rem;
 }
@@ -12,7 +12,7 @@
   object-fit: cover;
   object-position: center;
   font-weight: 700;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 .menu-display {
   padding-bottom: 3rem;
@@ -65,4 +65,36 @@
 .track-link .link {
   color: var(--primary-color);
   font-weight: 700;
+}
+
+/* mobile responsive styles */
+@media (max-width: 800px) {
+  .menu-glimpse {
+    grid-template-columns: 1fr;
+  }
+  .menu-display {
+    width: 100%;
+  }
+  .menu-display .redirect button {
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+    font-size: 1rem;
+  }
+  .menu-display .home-header {
+    width: 90%;
+    font-size: 3rem;
+  }
+  .menu-display .redirect {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-display .home-header {
+    font-size: 2rem;
+  }
+  .menu-display .redirect button {
+    padding-inline: 0.5rem;
+    padding-block: 0.9rem;
+  }
 }

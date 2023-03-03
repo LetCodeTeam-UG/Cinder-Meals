@@ -16,6 +16,7 @@ import lemonade from "../../images/lime-juice.jpg";
 import heineken from "../../images/heineken.jpg";
 import guinness from "../../images/guinness.jpg";
 import coke from "../../images/coca-cola.jpg";
+import { GoLinkExternal } from "react-icons/go";
 
 const Menu = () => {
   const menuHeader = "Choose from a variety of dishes";
@@ -181,7 +182,17 @@ const Menu = () => {
             >
               <button>
                 {" "}
-                <span>GHC{meal.price}</span>
+                <span
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: ".2rem",
+                  }}
+                >
+                  GHC{meal.price}
+                  {<GoLinkExternal color="white" size={20} />}
+                </span>
               </button>
             </Link>
           </div>
