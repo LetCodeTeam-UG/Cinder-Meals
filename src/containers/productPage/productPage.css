@@ -51,7 +51,8 @@
   font-size: 1rem;
 }
 
-/* ?\product section goes here */
+/* ?\product section goes here *
+/*  */
 
 .product-display {
   display: grid;
@@ -60,16 +61,10 @@
   padding-inline: var(--inline-padding-body);
   padding-block: 2rem;
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.43);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .product-display img {
   width: 100%;
-  border-radius: 100%;
+  border-radius: 1rem;
 }
 .product-display h1 {
   color: var(--primary-color);

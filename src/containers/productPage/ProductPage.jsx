@@ -60,6 +60,17 @@ const ProductPage = () => {
               amet maxime quia rerum atque non quasi.
             </span>
           </p>
+          <p className="topping-box">
+            Default Topping:{" "}
+            <span
+              style={{
+                color: "#ed7014",
+                fontWeight: "600",
+              }}
+            >
+              {product.topping}
+            </span>
+          </p>
         </div>
         <div>
           {/* product image goes here */}

@@ -36,6 +36,7 @@ const Menu = () => {
       description:
         "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
       id: "36262b4f-bd71-4279-8eb8-673b547db78d",
+      topping: "Chicken",
       image: jollof,
       price: 44.99,
     },
