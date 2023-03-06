@@ -176,7 +176,7 @@ const Menu = () => {
             <img src={meal.image} alt={meal.name} className="dish-image" />
             <h4 className="dish-name">{meal.name}</h4>
             <Link
-              to={`/product/${meal.id}`}
+              to={`/product/id?${meal.id}`}
               onClick={() => handleLinkClick(meal.id)}
               className="dish-price"
             >

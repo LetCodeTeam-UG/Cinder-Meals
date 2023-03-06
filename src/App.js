@@ -15,7 +15,7 @@ class App extends Component {
 					<Route path="/contact" element={<Contact />}></Route>
 					<Route path="/login" element={<Login />}></Route>
 					<Route path="/signup" element={<SignUp />}></Route>
-					<Route exact path="/product/:id" element={<ProductPage />}></Route>
+					<Route exact path="/product/id?" element={<ProductPage />}></Route>
 				</Routes>
 			</div>
 		);

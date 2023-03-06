@@ -25,7 +25,7 @@ const ProductPage = () => {
     const storedProduct = localStorage.getItem("product");
     if (storedProduct) {
       setProduct(JSON.parse(storedProduct));
-      localStorage.removeItem("product");
+      // localStorage.removeItem("product");
     }
   }, []);
 

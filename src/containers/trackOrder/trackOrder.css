@@ -7,6 +7,7 @@
   display: grid;
   place-items: center;
   color: var(--white);
+  padding-top: 3rem;
   position: relative;
 }
 .track-header-bg > * {
@@ -62,7 +63,7 @@
   display: flex;
 }
 .track-content_input input {
-  flex:2;
+  flex: 2;
   width: 100%;
   min-height: 50px;
   font-family: var(--font-family-main);
@@ -76,7 +77,7 @@
 }
 
 .track-content_input button {
-  flex:1;
+  flex: 1;
   width: 100%;
   min-height: 50px;
   font-family: var(--font-family-headers);
@@ -87,7 +88,6 @@
   line-height: 27px;
   padding: 0 1rem;
   color: var(--primary-color);
-
 }
 
 .track-content_track {
@@ -95,7 +95,7 @@
   justify-content: center;
 }
 
-.track-content_track img { 
+.track-content_track img {
   width: 700px;
   height: 700px;
 }
