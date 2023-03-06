@@ -11,6 +11,7 @@ const Login = () => {
     "Forgot Password?",
     "Create New Account",
   ];
+
   const loginBtn = (
     <Link className="to-login" to="/">
       <input className="login" type="submit" value={formProps[2]} />

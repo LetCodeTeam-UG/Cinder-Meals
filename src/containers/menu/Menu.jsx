@@ -157,7 +157,7 @@ const Menu = () => {
       </div>
       <section className="menu">
         <div className="categories">
-          <div className="menu-title">Menu</div>
+          <p className="menu-title">Menu</p>
           <div className="menu-categories">
             <div className="select-category" name="category" id="category">
               <button className="main" onClick={handleMainClick}>
@@ -174,7 +174,7 @@ const Menu = () => {
         {meals.map((meal) => (
           <div key={meal.id} className="item-container">
             <img src={meal.image} alt={meal.name} className="dish-image" />
-            <h3 className="dish-name">{meal.name}</h3>
+            <h4 className="dish-name">{meal.name}</h4>
             <Link
               to={`/product/${meal.id}`}
               onClick={() => handleLinkClick(meal.id)}

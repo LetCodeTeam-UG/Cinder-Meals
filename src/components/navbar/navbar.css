@@ -19,6 +19,13 @@
   color: var(--primary-color);
   font-weight: 600;
   font-size: 1.1rem;
+  padding-block: 0.8rem;
+  padding-inline: 1.2rem;
+  transition: 0.5s ease;
+}
+.cinder__navbar-links .paths:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 .cinder__navbar-links .cart {
   position: relative;

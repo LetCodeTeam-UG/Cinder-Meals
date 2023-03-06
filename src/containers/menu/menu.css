@@ -118,9 +118,20 @@
     font-size: 3rem;
   }
 }
+.select-category {
+  display: flex;
+  gap: 1rem;
+}
 
 @media (max-width: 500px) {
   .menu-header-bg .headers h1 {
     font-size: 2rem;
+  }
+  .menu .menu-title {
+    font-size: 1.5rem;
+  }
+  .menu .select-category button {
+    padding-block: 0.4rem;
+    padding-inline: 0.7rem;
   }
 }
