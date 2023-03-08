@@ -6,7 +6,6 @@
   height: 60vh;
   display: grid;
   place-items: center;
-  padding-top: 3rem;
   color: var(--white);
 }
 .contact-header-bg .headers {

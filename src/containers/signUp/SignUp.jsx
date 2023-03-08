@@ -14,7 +14,7 @@ const SignUp = () => {
     "Login",
   ];
   const loginBtn = (
-    <Link className="to-login" to="/login">
+    <Link className="to-login" to="/auth/login">
       <input className="login" type="submit" value={formProps[5]} />
     </Link>
   );
@@ -52,7 +52,7 @@ const SignUp = () => {
           <div className="new-user">
             Already Have An Account?{" "}
             <span>
-              <Link className="new" to="/login">
+              <Link className="new" to="/auth/login">
                 {formProps[6]}
               </Link>
             </span>

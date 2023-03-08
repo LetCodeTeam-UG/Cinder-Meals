@@ -190,7 +190,8 @@ const Menu = () => {
                     gap: ".2rem",
                   }}
                 >
-                  GHC{meal.price}
+                  <span>GHC </span>
+                  {meal.price}
                   {<GoLinkExternal color="white" size={20} />}
                 </span>
               </button>

@@ -5,7 +5,7 @@ import "./login.css";
 
 const Login = () => {
   const formProps = [
-    "Email",
+    "Username",
     "Password",
     "Login",
     "Forgot Password?",
@@ -13,7 +13,7 @@ const Login = () => {
   ];
 
   const loginBtn = (
-    <Link className="to-login" to="/">
+    <Link className="to-login" to="/home">
       <input className="login" type="submit" value={formProps[2]} />
     </Link>
   );
@@ -43,7 +43,7 @@ const Login = () => {
 
           {/* create new account */}
           <div className="new-user">
-            New to cinder?{" "}
+            New to cinder meals?{" "}
             <span>
               <Link className="new" to="/signup">
                 {formProps[4]}

@@ -1,13 +1,13 @@
 /* font families */
 @import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
 /* global variables */
 :root {
   --primary-color: #ed7014;
   --main-text-color: #080402;
   --white: #ffffff;
-  --bg-color: #fcfbfc;
+  --bg-color: #fbfcfa;
   --logo-size-desktop: 4rem;
   --logo-size-mobile: 2rem;
   --header-font-size: 4.5rem;

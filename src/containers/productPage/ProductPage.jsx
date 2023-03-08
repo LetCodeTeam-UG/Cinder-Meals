@@ -9,16 +9,6 @@ import { AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 const ProductPage = () => {
   // fetch data from the product clicked
 
-  // increase and decrease quantity on click
-  const [changeQuantity, setChangeQuantity] = useState(1);
-
-  const handleIncreaseQuantity = () => {
-    setChangeQuantity((prevchangeQuantity) => prevchangeQuantity + 1);
-  };
-  const handleDecreaseQuantity = () => {
-    setChangeQuantity((prevchangeQuantity) => prevchangeQuantity - 1);
-  };
-
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -29,9 +19,26 @@ const ProductPage = () => {
     }
   }, []);
 
+  // increase and decrease quantity on click
+  const [changeQuantity, setChangeQuantity] = useState(1);
+
+  const handleIncreaseQuantity = () => {
+    setChangeQuantity((prevchangeQuantity) => prevchangeQuantity + 1);
+
+    // this code runs when the user clicks the plus button and updates the price in the dom
+  };
+  const handleDecreaseQuantity = () => {
+    setChangeQuantity((prevchangeQuantity) => prevchangeQuantity - 1);
+  };
+
+  // the code to update the price on each click
+
+  // return statement when the product is not found
   if (!product) {
     return <div>Loading...</div>;
   }
+
+  //
 
   const productHeader = "Almost there";
   const formPlaceHolders = [

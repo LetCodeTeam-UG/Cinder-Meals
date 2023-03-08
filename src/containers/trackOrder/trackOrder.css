@@ -7,7 +7,6 @@
   display: grid;
   place-items: center;
   color: var(--white);
-  padding-top: 3rem;
   position: relative;
 }
 .track-header-bg > * {
@@ -30,72 +29,56 @@
   z-index: 1;
 }
 
-.track-your-order {
-  min-height: 50vh;
-  align-items: center;
-  justify-items: center;
-}
-
-.track-follow {
-  text-align: center;
-  color: var(--primary-color);
-  padding-top: 5rem;
-}
-
-.track-follow h1 {
-  font-family: var(--font-family-headers);
-  text-transform: uppercase;
-}
-
-.track-your-order-button {
+.track-content_container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.track-content_input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   width: 60%;
-  margin: 2rem 0 2rem;
-
-  display: flex;
+  margin: auto;
+  margin-block: 3rem;
 }
-.track-content_input input {
-  flex: 2;
-  width: 100%;
-  min-height: 50px;
-  font-family: var(--font-family-main);
-  border-radius: 5px 5px 5px 5px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 27px;
-  padding: 0 1rem;
-  border-color: var(--primary-color);
-}
-
-.track-content_input button {
-  flex: 1;
-  width: 100%;
-  min-height: 50px;
-  font-family: var(--font-family-headers);
-  border-radius: 5px 0px 0px 5px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 27px;
-  padding: 0 1rem;
+.track-follow h1 {
   color: var(--primary-color);
 }
-
 .track-content_track {
+  text-align: center;
+}
+.track-content_track img {
+  width: 15rem;
+}
+.track-input {
+  display: flex;
   align-items: center;
   justify-content: center;
+  padding-block: 1rem;
+  position: relative;
 }
 
-.track-content_track img {
-  width: 700px;
-  height: 700px;
+.track-input input {
+  width: 100%;
+  padding-block: 1rem;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--primary-color);
+  border-radius: 1.5rem;
+  padding-left: 3rem;
+  outline: 1px solid var(--primary-color);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  font-family: var(--font-family-headers);
+  margin-bottom: 2rem;
+  transition: 0.5s;
+}
+.track-input input:hover {
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 2.2rem;
+  color: var(--primary-color);
 }

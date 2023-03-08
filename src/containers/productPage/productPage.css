@@ -7,7 +7,6 @@
   display: grid;
   place-items: center;
   color: var(--white);
-  padding-top: 3rem;
 }
 .product-header-bg .headers {
   width: 60%;
