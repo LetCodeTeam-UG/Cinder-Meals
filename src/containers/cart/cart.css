@@ -1,0 +1,19 @@
+.cart-header-bg {
+    background-image: url("../../images/contact.jpg");
+    background-position: 20% 30%;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60vh;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+  }
+  .cart-header-bg .headers {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  .cart-header-bg .headers h1 {
+    font-size: var(--header-font-size);
+    font-family: var(--font-family-headers);
+  }
