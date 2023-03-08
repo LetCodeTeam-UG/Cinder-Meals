@@ -29,7 +29,7 @@ const Menu = () => {
         "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
       id: "6fe1738a-0105-4434-a25a-fd1b5929338d",
       image: rice,
-      price: 49.99,
+      price: 49.0,
       topping: "Chilli Sauce",
     },
     {
@@ -39,7 +39,7 @@ const Menu = () => {
       id: "36262b4f-bd71-4279-8eb8-673b547db78d",
       topping: "Chicken",
       image: jollof,
-      price: 44.99,
+      price: 44.0,
     },
     {
       name: "Chicken Salad",
@@ -47,7 +47,7 @@ const Menu = () => {
         "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
       id: "fb70b096-8aca-4fca-b6a8-89ce9b17272c",
       image: salad,
-      price: 54.99,
+      price: 54.0,
     },
     {
       name: "French Fries",
@@ -55,7 +55,7 @@ const Menu = () => {
         "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
       id: "d49f08dc-1a8d-4345-aef3-5bcd9667f0af",
       image: fries,
-      price: 34.99,
+      price: 34.0,
     },
     {
       name: "Assorted Noodles",
@@ -63,7 +63,7 @@ const Menu = () => {
         "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
       id: "a0be41ea-6402-4441-9579-c740fb83358b",
       image: noodles,
-      price: 39.99,
+      price: 39.0,
     },
     {
       name: "Grilled Chicken",
@@ -71,7 +71,7 @@ const Menu = () => {
         "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
       id: "0d5fbf03-2f46-4d70-adfb-a0de8e13a1ee",
       image: chicken,
-      price: 49.99,
+      price: 49.0,
     },
   ]);
   // eslint-disable-next-line
@@ -85,7 +85,7 @@ const Menu = () => {
           "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
         id: "2f378c9f-b291-4e80-b452-d0e3a161740c",
         image: watermelon,
-        price: 14.99,
+        price: 14.0,
       },
       {
         name: "Orange Juice",
@@ -93,7 +93,7 @@ const Menu = () => {
           "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
         id: "659c959c-94fd-4cf5-ab48-6264fb5d9f73",
         image: orange,
-        price: 14.99,
+        price: 14.0,
       },
       {
         name: "Lemonade",
@@ -101,7 +101,7 @@ const Menu = () => {
           "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
         id: "42ed1122-b200-4f87-a6c9-de527b9b0294",
         image: lemonade,
-        price: 19.99,
+        price: 19.0,
       },
       {
         name: "Heineken",
@@ -109,7 +109,7 @@ const Menu = () => {
           "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
         id: "5781b1ae-f3a7-4c64-ae74-bae60e8c62ee",
         image: heineken,
-        price: 24.99,
+        price: 24.0,
       },
       {
         name: "Malta Guinness",
@@ -117,7 +117,7 @@ const Menu = () => {
           "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
         id: "4f9036d2-effe-4456-8a1e-a21f9561c4ca",
         image: guinness,
-        price: 19.99,
+        price: 19.0,
       },
       {
         name: "Coca Cola",
@@ -125,7 +125,7 @@ const Menu = () => {
           "   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, debitis amet? Cupiditate earum incidunt doloremque eos ab a dicta quis?",
         id: "a4879be9-9c4d-490b-b0dd-6e142aac3e19",
         image: coke,
-        price: 14.99,
+        price: 14.0,
       },
     ];
     setMeals(beverages);

@@ -8,7 +8,6 @@ import {
 	ProductPage,
 	SignUp,
 	TrackOrder,
-	Cart,
 } from "./containers";
 import "./App.css";
 
@@ -16,7 +15,6 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<Cart />
 				<Routes>
 					<Route path="" element={<Login />}></Route>
 					<Route path="/home" element={<Home />}></Route>
