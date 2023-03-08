@@ -4,12 +4,6 @@
   justify-content: space-between;
   align-items: center;
   padding-inline: var(--inline-padding-body);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--bg-color);
-  z-index: 99;
 }
 .cinder__navbar-logo img {
   width: var(--logo-size-desktop);

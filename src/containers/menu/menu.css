@@ -7,7 +7,6 @@
   display: grid;
   place-items: center;
   color: var(--white);
-  padding-top: 3rem;
 }
 .menu-header-bg .headers {
   width: 60%;
@@ -76,6 +75,10 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 2rem;
   border-radius: 1rem;
+  transition: 0.5s ease-out;
+}
+.menu-items .item-container:hover {
+  transform: scale(1.1);
 }
 /* menu item props styling */
 .menu-items .item-container .dish-name,

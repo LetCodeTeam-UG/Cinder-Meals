@@ -1,10 +1,9 @@
 import React from "react";
-import {FiSearch} from "react-icons/fi"
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./trackOrder.css";
-import track from "../../images/track.jpg"
-
+import track from "../../images/track.png";
+import { GoSearch } from "react-icons/go";
 
 const TrackOrder = () => {
   return (
@@ -18,22 +17,22 @@ const TrackOrder = () => {
         </div>
       </section>
 
-
       <section className="track-your-order">
-          <div className="track-follow">
-            <h1>Follow up on your order</h1>
-          </div>
-        
-          <div className="track-content_input" >
-            <input type="number" placeholder="Enter your order number" />
-            <button type="button"> 
-            <FiSearch/>
-            </button>
-          </div>
+        <div className="track-follow">
+          <h1 style={{ textAlign: "center", marginTop: "2rem" }}>
+            Follow up on your order
+          </h1>
+        </div>
 
+        <section className="track-content_container">
+          <div className="track-input">
+            <input type="text" placeholder="Enter your order number" />
+            <GoSearch className="search-icon" />
+          </div>
           <div className="track-content_track">
             <img src={track} alt="track" />
           </div>
+        </section>
       </section>
       <Footer />
     </div>
