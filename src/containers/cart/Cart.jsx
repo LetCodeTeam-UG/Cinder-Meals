@@ -1,5 +1,6 @@
-import React from 'react'
-import "./cart.css"
+import React from "react";
+import "./cart.css";
+import Navbar from "../../components/navbar/Navbar";
 
 const Cart = () => {
   return (
@@ -13,7 +14,7 @@ const Cart = () => {
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
