@@ -3,42 +3,39 @@ import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./productPage.css";
 import { useEffect, useState } from "react";
-import { BsCartPlus } from "react-icons/bs";
 import { AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 
 const ProductPage = () => {
   // fetch data from the product clicked
 
   const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [price, setPrice] = useState(null);
 
   useEffect(() => {
     const storedProduct = localStorage.getItem("product");
     if (storedProduct) {
-      setProduct(JSON.parse(storedProduct));
-      // localStorage.removeItem("product");
+      const parsedProduct = JSON.parse(storedProduct);
+      setProduct(parsedProduct);
+      setPrice(parsedProduct.price);
     }
   }, []);
 
-  // increase and decrease quantity on click
-  const [changeQuantity, setChangeQuantity] = useState(1);
-
   const handleIncreaseQuantity = () => {
-    setChangeQuantity((prevchangeQuantity) => prevchangeQuantity + 1);
-
-    // this code runs when the user clicks the plus button and updates the price in the dom
+    setQuantity(quantity + 1);
+    setPrice((quantity + 1) * product.price);
   };
+
   const handleDecreaseQuantity = () => {
-    setChangeQuantity((prevchangeQuantity) => prevchangeQuantity - 1);
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+      setPrice((quantity - 1) * product.price);
+    }
   };
-
-  // the code to update the price on each click
-
-  // return statement when the product is not found
+  // return statement when the product is text-align: center;-align: center; found
   if (!product) {
     return <div>Loading...</div>;
   }
-
-  //
 
   const productHeader = "Almost there";
   const formPlaceHolders = [
@@ -112,6 +109,7 @@ const ProductPage = () => {
       {/* product quantity section */}
 
       {/* cart container section goes here */}
+
       <div className="checkout-cart">
         <p
           style={{
@@ -120,9 +118,9 @@ const ProductPage = () => {
             color: "#000e00",
           }}
         >
-          GHC{product.price}
+          GHC{price}
         </p>
-        <BsCartPlus color="#ed7014" fontSize="4rem" />
+        <button className="add-item">Add to Cart</button>
         <div
           className="quantity-container"
           style={{
@@ -142,7 +140,7 @@ const ProductPage = () => {
               fontWeight: "700",
             }}
           >
-            {changeQuantity}
+            {quantity}
           </span>
           <AiFillPlusCircle
             color="#ed7014"

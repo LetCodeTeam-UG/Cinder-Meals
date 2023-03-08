@@ -79,7 +79,18 @@
   font-weight: 500;
   line-height: 1.5;
 }
-
+/* add to cart btn */
+.add-item {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.3rem;
+  font-weight: 700;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-family: var(--font-family-main);
+  font-size: 1rem;
+}
 /* checkout cart sytles */
 .checkout-cart {
   display: flex;

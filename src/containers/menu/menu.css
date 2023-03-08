@@ -37,16 +37,45 @@
   font-family: var(--font-family-headers);
 }
 .select-category button {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
   border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
   background-color: var(--bg-color);
   color: var(--primary-color);
-  font-family: var(--font-family-headers);
-  text-align: center;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  outline: 1px solid var(--primary-color);
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid var(--primary-color);
 }
+
+.select-category button:hover {
+  color: var(--white);
+  transform: scale(1.1);
+  outline: 2px solid var(--primary-color);
+  box-shadow: 4px 5px 17px -4px var(--primary-color);
+}
+.select-category button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.select-category button:hover::before {
+  width: 250%;
+}
+
 .select-category {
   display: flex;
   gap: 1rem;
@@ -75,10 +104,11 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 2rem;
   border-radius: 1rem;
-  transition: 0.5s ease-out;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 .menu-items .item-container:hover {
-  transform: scale(1.1);
+  transform: translateY(-10px);
+  box-shadow: 0 0 5px var(--primary-color);
 }
 /* menu item props styling */
 .menu-items .item-container .dish-name,
