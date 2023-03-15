@@ -95,6 +95,7 @@ const Menu = () => {
         image: orange,
         price: 14.0,
       },
+
       {
         name: "Lemonade",
         description:
