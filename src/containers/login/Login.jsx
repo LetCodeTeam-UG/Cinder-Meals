@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 import "./login.css";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  console.log(username);
+  console.log(password);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const response = await fetch("127.0.0.1:8000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+    const token = data.token;
+
+    // Store the token somewhere (e.g. local storage)
+    localStorage.setItem("token", token);
+  };
+
   const formProps = [
     "Username",
     "Password",
@@ -24,16 +48,26 @@ const Login = () => {
         <span className="logo">
           <img src={logo} alt="cinder" />
         </span>
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           {/* username */}
           <div className="props">
             <label htmlFor="email">{formProps[0]}</label>
-            <input type="email" id="email" />
+            <input
+              type="email"
+              id="email"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </div>
           {/* password */}
           <div className="props">
             <label htmlFor="password">{formProps[1]}</label>
-            <input type="password" id="password" />
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
 
           {/* login-btn */}
