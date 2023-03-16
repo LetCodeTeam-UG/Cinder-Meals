@@ -4,6 +4,9 @@
   justify-content: space-between;
   align-items: center;
   padding-inline: var(--inline-padding-body);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
 }
 .cinder__navbar-logo img {
   width: var(--logo-size-desktop);
