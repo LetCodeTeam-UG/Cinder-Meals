@@ -13,10 +13,11 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch("127.0.0.1:8000/api/auth/login", {
+    const response = await fetch("http://127.0.0.1:8000/api/auth/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Token ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({ username, password }),
     });
@@ -26,6 +27,7 @@ const Login = () => {
 
     // Store the token somewhere (e.g. local storage)
     localStorage.setItem("token", token);
+
   };
 
   const formProps = [
@@ -38,7 +40,7 @@ const Login = () => {
 
   const loginBtn = (
     <Link className="to-login" to="/home">
-      <input className="login" type="submit" value={formProps[2]} />
+      <input className="login" type="submit"onClick={handleSubmit} value={formProps[2]} />
     </Link>
   );
   return (
@@ -48,7 +50,7 @@ const Login = () => {
         <span className="logo">
           <img src={logo} alt="cinder" />
         </span>
-        <form action="" onSubmit={handleSubmit}>
+        <form action="">
           {/* username */}
           <div className="props">
             <label htmlFor="email">{formProps[0]}</label>
