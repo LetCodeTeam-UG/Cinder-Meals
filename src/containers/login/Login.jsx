@@ -4,11 +4,8 @@ import logo from "../../images/logo.png";
 import "./login.css";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  console.log(username);
-  console.log(password);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,7 +16,7 @@ const Login = () => {
         "Content-Type": "application/json",
         "Authorization": `Token ${localStorage.getItem("token")}`,
       },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     const data = await response.json();
@@ -30,17 +27,9 @@ const Login = () => {
 
   };
 
-  const formProps = [
-    "Username",
-    "Password",
-    "Login",
-    "Forgot Password?",
-    "Create New Account",
-  ];
-
   const loginBtn = (
     <Link className="to-login" to="/home">
-      <input className="login" type="submit"onClick={handleSubmit} value={formProps[2]} />
+      <input className="login" type="submit" value="Login" />
     </Link>
   );
   return (
@@ -53,17 +42,17 @@ const Login = () => {
         <form action="">
           {/* username */}
           <div className="props">
-            <label htmlFor="email">{formProps[0]}</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           {/* password */}
           <div className="props">
-            <label htmlFor="password">{formProps[1]}</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
@@ -75,14 +64,14 @@ const Login = () => {
           {/* login-btn */}
           <div className="props">{loginBtn}</div>
           {/* password reset */}
-          <div className="reset">{formProps[3]}</div>
+          <div className="reset">Forgot Password?</div>
 
           {/* create new account */}
           <div className="new-user">
             New to cinder meals?{" "}
             <span>
               <Link className="new" to="/signup">
-                {formProps[4]}
+                Create New Account
               </Link>
             </span>
           </div>
