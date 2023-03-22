@@ -10,7 +10,7 @@ const Menu = () => {
   const menuSubHeader = "From Local to Continental";
 
   const [meals, setMeals] = useState([]);
-  const [mainMeals, setMainMeals] = useState([]);
+  // const [mainMeals, setMainMeals] = useState([]);
   // const [beverageMeals, setBeverageMeals] = useState([]);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const Menu = () => {
       .then((response) => response.json())
       .then((data) => {
         setMeals(data);
-        setMainMeals(data.filter((meal) => meal.type === "main"));
+        // setMainMeals(data.filter((meal) => meal.type === "main"));
         // setBeverageMeals(data.filter((meal) => meal.category === "beverage"));
       });
-  }, [meals]);
+  }, []);
 
   // const handleMainClick = () => {
   //   setMeals(originalMeals);
@@ -29,7 +29,7 @@ const Menu = () => {
 
   // get data when user clicks
   const handleLinkClick = (id) => {
-    const product = mainMeals.find((meal) => meal.id === id);
+    const product = meals.find((meal) => meal.id === id);
     if (product) {
       // store the product object in localStorage
       localStorage.setItem("product", JSON.stringify(product));
@@ -59,7 +59,7 @@ const Menu = () => {
         </div>
       </section>
       <section className="menu-items">
-        {mainMeals.map((meal) => (
+        {meals.map((meal) => (
           <div key={meal.id} className="item-container">
             <img src={meal.image} alt={meal.name} className="dish-image" />
             <h4 className="dish-name">{meal.name}</h4>
