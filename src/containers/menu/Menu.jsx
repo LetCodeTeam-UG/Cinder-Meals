@@ -9,7 +9,7 @@ const Menu = () => {
   const menuHeader = "Choose from a variety of dishes";
   const menuSubHeader = "From Local to Continental";
 
-  const [meals, setMeals] = useState([]);
+  const [meals, setMeals] = useState({});
   // const [mainMeals, setMainMeals] = useState([]);
   // const [beverageMeals, setBeverageMeals] = useState([]);
 
@@ -18,25 +18,26 @@ const Menu = () => {
       .then((response) => response.json())
       .then((data) => {
         setMeals(data);
+        // const errorMessage = data.error_message;
         // setMainMeals(data.filter((meal) => meal.type === "main"));
         // setBeverageMeals(data.filter((meal) => meal.category === "beverage"));
       });
-  }, [meals]);
+  });
 
   // const handleMainClick = () => {
   //   setMeals(originalMeals);
   // };
 
   // get data when user clicks
-  const handleLinkClick = (id) => {
-    const product = meals.find((meal) => meal.id === id);
-    if (product) {
-      // store the product object in localStorage
-      localStorage.setItem("product", JSON.stringify(product));
-      // update address bar with product id and path
-      // update the route to the Product Page in the app.js
-    }
-  };
+  // const handleLinkClick = (id) => {
+  //   const product = meals.find((meal) => meal.id === id);
+  //   if (product) {
+  //     // store the product object in localStorage
+  //     localStorage.setItem("product", JSON.stringify(product));
+  //     // update address bar with product id and path
+  //     // update the route to the Product Page in the app.js
+  //   }
+  // };
 
   return (
     <>
@@ -65,7 +66,7 @@ const Menu = () => {
             <h4 className="dish-name">{meal.name}</h4>
             <Link
               to={`/product/id?${meal.id}`}
-              onClick={() => handleLinkClick(meal.id)}
+              // onClick={() => handleLinkClick(meal.id)}
               className="dish-price"
             >
               <button>
