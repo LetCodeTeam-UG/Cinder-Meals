@@ -61,7 +61,7 @@ const Menu = () => {
       <section className="menu-items">
         {meals.map((meal) => (
           <div key={meal.id} className="item-container">
-            <img src={meal.image} alt={meal.name} className="dish-image" />
+            <img src={meal.image} alt={meal.title} className="dish-image" />
             <h4 className="dish-name">{meal.name}</h4>
             <Link
               to={`/product/id?${meal.id}`}
