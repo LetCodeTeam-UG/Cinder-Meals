@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
+    fullname: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -26,7 +27,7 @@ const SignUp = () => {
     }
 
     // make API call to post the data
-    const response = await fetch("https://your-api-endpoint.com/signup", {
+    const response = await fetch("http://127.0.0.1:8000/api/auth/register/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +37,7 @@ const SignUp = () => {
 
     if (response.ok) {
       // redirect to the login page
-      window.location.href = "/login";
+      window.location.href = "/auth/login";
     } else {
       const errorData = await response.json();
       setError(errorData.message);
@@ -50,7 +51,19 @@ const SignUp = () => {
           <img src={logo} alt="cinder" />
         </span>
         <form onSubmit={handleSubmit}>
-          {error && <p>{error}</p>}
+          {error && <p style={{
+            color: "red",
+          }}>{error}</p>}
+             <div className="props">
+            <label htmlFor="fullname">Full Name</label>
+            <input
+              type="text"
+              name="fullname"
+              value={formData.fullname}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
           <div className="props">
             <label htmlFor="email">Email</label>
             <input

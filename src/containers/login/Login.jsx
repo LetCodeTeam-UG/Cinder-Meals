@@ -7,6 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const[successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,7 +22,7 @@ const Login = () => {
     const loginData = { email, password };
 
     // make a POST request to the API endpoint
-    fetch("https://example.com/login", {
+    fetch("http://127.0.0.1:8000/api/auth/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +35,12 @@ const Login = () => {
         if (data.token) {
           // store the token in local storage or a cookie
           localStorage.setItem("token", data.token);
-          window.location.href = "/home";
+          setTimeout(() => {
+            window.location.href = "/home";
+          }, 2000);
+          setSuccessMessage("Login successful");
+         
+          
           // redirect to the home page or set a state to display home page
         } else {
           setErrorMessage("Invalid username or password.");
@@ -79,12 +85,13 @@ const Login = () => {
           <div className="props">
             <input className="login" type="submit" value="Login" />
           </div>
+          {successMessage && <p style={{fontWeight: "700"}}>{successMessage}</p>}
         </form>
         <div className="reset">Forgot Password?</div>
         <div className="new-user">
           New to cinder meals?{" "}
           <span>
-            <Link className="new" to="/signup">
+            <Link className="new" to="/auth/register">
               Create New Account
             </Link>
           </span>
