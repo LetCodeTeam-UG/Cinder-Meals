@@ -60,7 +60,16 @@ const Menu = () => {
         </div>
       </section>
       <section className="menu-items">
-        {meals.map((meal) => (
+        <ul>
+          {meals.map((meal) => (
+            <li key={meal.id}>
+              <h2>{meal.title}</h2>
+              <img src={meal.image} alt={meal.title} />
+              <p>{meal.description}</p>
+            </li>
+          ))}
+        </ul>
+        {/* {meals.map((meal) => (
           <div key={meal.id} className="item-container">
             <img src={meal.image} alt={meal.title} className="dish-image" />
             <h4 className="dish-name">{meal.name}</h4>
@@ -86,7 +95,7 @@ const Menu = () => {
               </button>
             </Link>
           </div>
-        ))}
+        ))} */}
       </section>
 
       <Footer />
