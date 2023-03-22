@@ -21,7 +21,7 @@ const Menu = () => {
         // setMainMeals(data.filter((meal) => meal.type === "main"));
         // setBeverageMeals(data.filter((meal) => meal.category === "beverage"));
       });
-  }, []);
+  }, [meals]);
 
   // const handleMainClick = () => {
   //   setMeals(originalMeals);
