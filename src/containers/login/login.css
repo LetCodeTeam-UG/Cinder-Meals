@@ -67,7 +67,7 @@
 }
 .login-container .new-user {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 .login-container .new-user .new {
   color: var(--primary-color);
