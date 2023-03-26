@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../login/login.css";
 import logo from "../../images/logo.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -51,10 +51,16 @@ const SignUp = () => {
           <img src={logo} alt="cinder" />
         </span>
         <form onSubmit={handleSubmit}>
-          {error && <p style={{
-            color: "red",
-          }}>{error}</p>}
-             <div className="props">
+          {error && (
+            <p
+              style={{
+                color: "red",
+              }}
+            >
+              {error}
+            </p>
+          )}
+          <div className="props">
             <label htmlFor="fullname">Full Name</label>
             <input
               type="text"
@@ -101,14 +107,14 @@ const SignUp = () => {
             <input className="login" type="submit" value="Register" />
           </div>
         </form>
-        <div className="new-user">
+        {/* <div className="new-user">
           Already Have An Account?
           <span>
             <Link className="new" to="/auth/login">
               Login
             </Link>
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

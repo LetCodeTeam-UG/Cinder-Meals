@@ -28,7 +28,10 @@ const Home = () => {
           <div className="redirect">
             <button className="menu-link">
               {" "}
-              <Link className="link" to={redirectBtns[0].link}>
+              <Link
+                className="link"
+                onClick={() => (window.location.href = "/menu")}
+              >
                 {redirectBtns[0].name}
               </Link>{" "}
             </button>

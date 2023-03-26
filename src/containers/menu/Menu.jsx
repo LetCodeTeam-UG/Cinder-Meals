@@ -9,7 +9,7 @@ const Menu = () => {
   const menuHeader = "Choose from a variety of dishes";
   const menuSubHeader = "From Local to Continental";
 
-  const [meals, setMeals] = useState({});
+  const [meals, setMeals] = useState([]);
   // const [mainMeals, setMainMeals] = useState([]);
   // const [beverageMeals, setBeverageMeals] = useState([]);
 
@@ -22,22 +22,22 @@ const Menu = () => {
         // setMainMeals(data.filter((meal) => meal.type === "main"));
         // setBeverageMeals(data.filter((meal) => meal.category === "beverage"));
       });
-  });
+  }, []);
 
   // const handleMainClick = () => {
   //   setMeals(originalMeals);
   // };
 
   // get data when user clicks
-  // const handleLinkClick = (id) => {
-  //   const product = meals.find((meal) => meal.id === id);
-  //   if (product) {
-  //     // store the product object in localStorage
-  //     localStorage.setItem("product", JSON.stringify(product));
-  //     // update address bar with product id and path
-  //     // update the route to the Product Page in the app.js
-  //   }
-  // };
+  const handleLinkClick = (id) => {
+    const product = meals.find((meal) => meal.id === id);
+    if (product) {
+      // store the product object in localStorage
+      localStorage.setItem("product", JSON.stringify(product));
+      // update address bar with product id and path
+      // update the route to the Product Page in the app.js
+    }
+  };
 
   return (
     <>
@@ -60,22 +60,13 @@ const Menu = () => {
         </div>
       </section>
       <section className="menu-items">
-        <ul>
-          {meals.map((meal) => (
-            <li key={meal.id}>
-              <h2>{meal.title}</h2>
-              <img src={meal.image} alt={meal.title} />
-              <p>{meal.description}</p>
-            </li>
-          ))}
-        </ul>
-        {/* {meals.map((meal) => (
+        {meals.map((meal) => (
           <div key={meal.id} className="item-container">
             <img src={meal.image} alt={meal.title} className="dish-image" />
             <h4 className="dish-name">{meal.name}</h4>
             <Link
               to={`/product/id?${meal.id}`}
-              // onClick={() => handleLinkClick(meal.id)}
+              onClick={() => handleLinkClick(meal.id)}
               className="dish-price"
             >
               <button>
@@ -95,7 +86,7 @@ const Menu = () => {
               </button>
             </Link>
           </div>
-        ))} */}
+        ))}
       </section>
 
       <Footer />

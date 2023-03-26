@@ -7,20 +7,15 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const[successMessage, setSuccessMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // perform form validation here
     if (!email || !password) {
       setErrorMessage("Please enter a username and password.");
       return;
     }
-
-    // create an object containing the form data
     const loginData = { email, password };
-
     // make a POST request to the API endpoint
     fetch("http://127.0.0.1:8000/api/auth/login/", {
       method: "POST",
@@ -39,8 +34,7 @@ const Login = () => {
             window.location.href = "/home";
           }, 2000);
           setSuccessMessage("Login successful");
-         
-          
+
           // redirect to the home page or set a state to display home page
         } else {
           setErrorMessage("Invalid username or password.");
@@ -85,7 +79,9 @@ const Login = () => {
           <div className="props">
             <input className="login" type="submit" value="Login" />
           </div>
-          {successMessage && <p style={{fontWeight: "700"}}>{successMessage}</p>}
+          {successMessage && (
+            <p style={{ fontWeight: "700" }}>{successMessage}</p>
+          )}
         </form>
         <div className="reset">Forgot Password?</div>
         <div className="new-user">
