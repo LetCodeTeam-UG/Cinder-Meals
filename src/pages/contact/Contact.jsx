@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import "./contact.css";
+import "./Contact.css";
 import { BiLocationPlus, BiPhoneCall } from "react-icons/bi";
 import { BsEnvelope } from "react-icons/bs";
 const Contact = () => {

@@ -40,6 +40,7 @@
   border-radius: 0.3rem;
   font-size: 1rem;
   padding-left: 0.5rem;
+  transition: 0.5s;
 }
 
 .login-container .login {
@@ -58,7 +59,7 @@
   cursor: pointer;
 }
 
-.login-container #login:hover {
+.login-container .login:hover {
   box-shadow: 0 0 30px var(--primary-color);
 }
 .login-container .reset {
@@ -67,7 +68,7 @@
 }
 .login-container .new-user {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 1.5rem;
 }
 .login-container .new-user .new {
   color: var(--primary-color);

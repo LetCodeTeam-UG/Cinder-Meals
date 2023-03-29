@@ -8,7 +8,7 @@ import {
 	ProductPage,
 	SignUp,
 	TrackOrder,
-} from "./containers";
+} from "./pages";
 import "./App.css";
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
 					<Route path="/trackorder" element={<TrackOrder />}></Route>
 					<Route path="/contact" element={<Contact />}></Route>
 					<Route path="/auth/login" element={<Login />}></Route>
-					<Route path="/signup" element={<SignUp />}></Route>
+					<Route path="/auth/register" element={<SignUp />}></Route>
 					<Route exact path="/product/id?" element={<ProductPage />}></Route>
 				</Routes>
 			</div>

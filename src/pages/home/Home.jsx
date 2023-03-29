@@ -5,7 +5,7 @@ import grilled from "../../images/grilled-chicken.jpg";
 import jollof from "../../images/jollof-rice.jpg";
 import side from "../../images/home-dish-one.jpg";
 import { Link } from "react-router-dom";
-import "../home/home.css";
+import "./Home.css";
 
 const Home = () => {
   const homeHeader = "A genuine fine-dining experience awaits.";
@@ -28,7 +28,10 @@ const Home = () => {
           <div className="redirect">
             <button className="menu-link">
               {" "}
-              <Link className="link" to={redirectBtns[0].link}>
+              <Link
+                className="link"
+                onClick={() => (window.location.href = "/menu")}
+              >
                 {redirectBtns[0].name}
               </Link>{" "}
             </button>

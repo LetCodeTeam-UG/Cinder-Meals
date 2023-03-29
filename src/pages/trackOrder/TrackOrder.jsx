@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import "./trackOrder.css";
+import "./TrackOrder.css";
 import track from "../../images/track.png";
 import { GoSearch } from "react-icons/go";
 
