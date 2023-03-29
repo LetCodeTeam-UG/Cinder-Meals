@@ -17,7 +17,9 @@ const Menu = () => {
     fetch("http://127.0.0.1:8000/api/meals/")
       .then((response) => response.json())
       .then((data) => {
-        setMeals(data);
+        const mealsData = data.meals;
+        console.log(mealsData)
+        setMeals(mealsData)
         // const errorMessage = data.error_message;
         // setMainMeals(data.filter((meal) => meal.type === "main"));
         // setBeverageMeals(data.filter((meal) => meal.category === "beverage"));
@@ -60,10 +62,12 @@ const Menu = () => {
         </div>
       </section>
       <section className="menu-items">
-        {meals.map((meal) => (
-          <div key={meal.id} className="item-container">
-            <img src={meal.image} alt={meal.title} className="dish-image" />
-            <h4 className="dish-name">{meal.name}</h4>
+        {meals.map((meal) => {
+          return (
+            <div key={meal.id} className="item-container">
+            <img src={meal.image_url} alt={meal.title} className="dish-image" />
+            {console.log(meal.image_url)}
+            <h4 className="dish-name">{meal.title}</h4>
             <Link
               to={`/product/id?${meal.id}`}
               onClick={() => handleLinkClick(meal.id)}
@@ -86,7 +90,9 @@ const Menu = () => {
               </button>
             </Link>
           </div>
-        ))}
+          )
+          
+})}
       </section>
 
       <Footer />
