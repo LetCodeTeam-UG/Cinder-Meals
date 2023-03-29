@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import "./menu.css";
+import "./Menu.css";
 import { Link } from "react-router-dom";
 import { GoLinkExternal } from "react-icons/go";
 

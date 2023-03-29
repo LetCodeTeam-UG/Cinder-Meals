@@ -5,7 +5,7 @@ import grilled from "../../images/grilled-chicken.jpg";
 import jollof from "../../images/jollof-rice.jpg";
 import side from "../../images/home-dish-one.jpg";
 import { Link } from "react-router-dom";
-import "../home/home.css";
+import "./Home.css";
 
 const Home = () => {
   const homeHeader = "A genuine fine-dining experience awaits.";

@@ -8,7 +8,7 @@ import {
 	ProductPage,
 	SignUp,
 	TrackOrder,
-} from "./containers";
+} from "./pages";
 import "./App.css";
 
 class App extends Component {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
-import "./login.css";
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -33,7 +33,7 @@ const Login = () => {
           setTimeout(() => {
             window.location.href = "/home";
           }, 2000);
-          setSuccessMessage("Login successful");
+          setSuccessMessage(`Authenticated as ${email}`);
 
           // redirect to the home page or set a state to display home page
         } else {
@@ -80,7 +80,9 @@ const Login = () => {
             <input className="login" type="submit" value="Login" />
           </div>
           {successMessage && (
-            <p style={{ fontWeight: "700" }}>{successMessage}</p>
+            <p style={{ fontWeight: "700", background: "lightblue" }}>
+              {successMessage}
+            </p>
           )}
         </form>
         <div className="reset">Forgot Password?</div>
