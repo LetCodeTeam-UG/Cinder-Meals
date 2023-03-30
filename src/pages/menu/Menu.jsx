@@ -18,8 +18,8 @@ const Menu = () => {
       .then((response) => response.json())
       .then((data) => {
         const mealsData = data.meals;
-        console.log(mealsData)
-        setMeals(mealsData)
+        console.log(mealsData);
+        setMeals(mealsData);
         // const errorMessage = data.error_message;
         // setMainMeals(data.filter((meal) => meal.type === "main"));
         // setBeverageMeals(data.filter((meal) => meal.category === "beverage"));
@@ -65,34 +65,33 @@ const Menu = () => {
         {meals.map((meal) => {
           return (
             <div key={meal.id} className="item-container">
-            <img src={meal.image_url} alt={meal.title} className="dish-image" />
-            {console.log(meal.image_url)}
-            <h4 className="dish-name">{meal.title}</h4>
-            <Link
-              to={`/product/id?${meal.id}`}
-              onClick={() => handleLinkClick(meal.id)}
-              className="dish-price"
-            >
-              <button>
-                {" "}
-                <span
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: ".2rem",
-                  }}
-                >
-                  <span>GHC </span>
-                  {meal.price}
-                  {<GoLinkExternal color="white" size={20} />}
-                </span>
-              </button>
-            </Link>
-          </div>
-          )
-          
-})}
+              <img src={meal.image_url} alt={meal.title} className="dish-image" />
+              {console.log(meal.image_url)}
+              <h4 className="dish-name">{meal.title}</h4>
+              <Link
+                to={`/product/id?${meal.id}`}
+                onClick={() => handleLinkClick(meal.id)}
+                className="dish-price"
+              >
+                <button>
+                  {" "}
+                  <span
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: ".2rem",
+                    }}
+                  >
+                    <span>GHC </span>
+                    {meal.price}
+                    {<GoLinkExternal color="white" size={20} />}
+                  </span>
+                </button>
+              </Link>
+            </div>
+          );
+        })}
       </section>
 
       <Footer />
