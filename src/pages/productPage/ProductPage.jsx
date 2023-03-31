@@ -2,24 +2,10 @@ import React from "react";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./ProductPage.css";
-import { useEffect, useState } from "react";
 import { AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 
-const ProductPage = () => {
+const ProductPage = ({ product, price, setPrice, quantity, setQuantity }) => {
   // fetch data from the product clicked
-
-  const [product, setProduct] = useState(null);
-  const [quantity, setQuantity] = useState(1);
-  const [price, setPrice] = useState(null);
-
-  useEffect(() => {
-    const storedProduct = localStorage.getItem("product");
-    if (storedProduct) {
-      const parsedProduct = JSON.parse(storedProduct);
-      setProduct(parsedProduct);
-      setPrice(parsedProduct.price);
-    }
-  }, []);
 
   const handleIncreaseQuantity = () => {
     setQuantity(quantity + 1);
