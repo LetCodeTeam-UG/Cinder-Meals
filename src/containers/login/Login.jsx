@@ -46,7 +46,7 @@ const Login = () => {
             <input
               type="email"
               id="email"
-              value={email}
+              value="Okantey"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -56,7 +56,7 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              value={password}
+              value="okantey123"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
